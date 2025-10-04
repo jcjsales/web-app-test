@@ -1,6 +1,4 @@
 from selenium.common import NoSuchElementException
-from selenium.webdriver import Keys
-import logging
 
 from utils.page_actions import PageActions
 from selenium.webdriver.common.by import By
@@ -12,8 +10,6 @@ class BrowsePage:
     STREAMER_NAME_CHANNEL_LIST = "(//*[@id='page-main-content-wrapper']//button)[1]//h2"
     DIALOG_CLOSE_BUTTON = "//*[@class='Layout-sc-1xcs6mc-0 haxzqw']"
     DIALOG_CLOSE_BUTTON_JS = "document.getElementsByClassName('Layout-sc-1xcs6mc-0 haxzqw')[0].click()"
-    #DIALOG_CLOSE_BUTTON = "//button[@aria-label='Activate to close dialog']"
-    #DIALOG_EXPAND_BUTTON = "//button[@aria-label='Activate to expand dialog']"
 
 
     def __init__(self, driver):
@@ -37,7 +33,6 @@ class BrowsePage:
     def close_dialog_if_visible(self):
         try:
             dialog_close_element = self.driver.find_element(By.XPATH, self.DIALOG_CLOSE_BUTTON)
-            logging.info(dialog_close_element.is_displayed)
             if dialog_close_element.is_displayed():
                 self.driver.execute_script(self.DIALOG_CLOSE_BUTTON_JS)
         except NoSuchElementException:
