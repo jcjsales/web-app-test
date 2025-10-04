@@ -1,5 +1,5 @@
 from datetime import datetime
-import os
+import time
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,6 +13,7 @@ class PageActions:
         WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, locator))
         )
+        time.sleep(.5)
         self.driver.find_element(By.XPATH, locator).click()
 
     def wait_for_textfield_and_input_text(self, locator, text):
