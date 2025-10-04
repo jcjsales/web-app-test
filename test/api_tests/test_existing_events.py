@@ -1,8 +1,8 @@
 import requests
 import pytest
-from test_data.event_data import API_URL, API_TOKEN, EVENT_IDS, EXPECTED_DATA
+from test_data.event_data import API_URL, API_TOKEN, EXPECTED_DATA
 
-@pytest.fixture(params=EVENT_IDS)
+@pytest.fixture(params=list(EXPECTED_DATA.keys()))
 def event_data(request):
     event_id = request.param
     response = requests.get(API_URL + "/events/" + event_id + "/?token=" + API_TOKEN)
