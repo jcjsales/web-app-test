@@ -1,7 +1,7 @@
 ## About The Project
 
-This repository contains tests for Twitch and Eventbrite
-The test written for Twitch covers streamer flow where structure can be extended to different scenarios and testing platform (web and more mobile options)
+This repository contains tests for Twitch and Eventbrite.
+The test written for Twitch covers streamer flow where structure can be extended to different scenarios and testing platform (web and more mobile options).
 API tests are written to validate few events in created in Eventbrite.
 
 ## Setup
