@@ -1,12 +1,6 @@
 API_URL = "https://www.eventbriteapi.com/v3"
 API_TOKEN = "7HLTFQBSPRPUP5MRGJAI"
 
-EVENT_IDS = [
-    "1772139630339",
-    "1772401954959",
-    "1772319548479"
-]
-
 EXPECTED_DATA = {
     "1772139630339": {
         "name": "Test Event 41025 - Halloween Party 2026",
