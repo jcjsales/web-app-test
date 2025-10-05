@@ -27,3 +27,5 @@ EXPECTED_DATA = {
         "capacity": "20",
     }
 }
+
+EVENT_ID_TO_UPDATE = "1773062941989"
